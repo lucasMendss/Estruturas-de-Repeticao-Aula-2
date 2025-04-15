@@ -65,8 +65,13 @@ namespace Estruturas_de_Repetição_Aula_2
                             convertedToInt = false;
                         }
                     }
-
-                    if (num >= maior)
+                
+                    if (i == 1)
+                    {
+                        maior = num;
+                        menor = num;
+                    }
+                    else if (num >= maior)
                     {
                         maior = num;
                         menor = num;
@@ -79,9 +84,9 @@ namespace Estruturas_de_Repetição_Aula_2
                     soma = soma + num;
                 }
                 Console.WriteLine("----------------------------------------");
-                Console.WriteLine("Maior:" + maior);
-                Console.WriteLine("Menor:" + menor);
-                Console.WriteLine("Soma dos valores: " + soma);
+                Console.WriteLine("Maior valor digitado:" + maior);
+                Console.WriteLine("Menor valor digitado:" + menor);
+                Console.WriteLine("Soma dos valores digitados: " + soma);
             }
             Verifica10Numeros();
             Console.ReadKey();
