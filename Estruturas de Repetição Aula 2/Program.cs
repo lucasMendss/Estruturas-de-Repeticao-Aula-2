@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -84,12 +84,19 @@ namespace Estruturas_de_Repetição_Aula_2
                     soma = soma + num;
                 }
                 Console.WriteLine("----------------------------------------");
-                Console.WriteLine("Maior valor digitado:" + maior);
-                Console.WriteLine("Menor valor digitado:" + menor);
+                Console.WriteLine("Maior valor digitado: " + maior);
+                Console.WriteLine("Menor valor digitado: " + menor);
                 Console.WriteLine("Soma dos valores digitados: " + soma);
             }
-            Verifica10Numeros();
-            Console.ReadKey();
+
+            string continuar = "S";
+            while (continuar == "S")
+            {
+                Verifica10Numeros();
+                Console.WriteLine("----------------------------------------");
+                Console.WriteLine("Repetir? (S/N):");
+                continuar = Console.ReadLine().ToUpper();
+            }
         }
     }
 }
